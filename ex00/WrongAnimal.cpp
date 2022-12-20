@@ -26,7 +26,7 @@ WrongAnimal&	WrongAnimal::operator=( const WrongAnimal& rhs ) {
 }
 
 void WrongAnimal::makesound() const {
-	std::cout << "*" << type << " is pooping on the floor*" << std::endl;
+	std::cout << "*" << type << " is making the wrong noise*" << std::endl;
 }
 
 std::string WrongAnimal::getType() const {

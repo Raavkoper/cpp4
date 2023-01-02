@@ -1,25 +1,42 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongCat.hpp"
 
 int main() {
-    const Animal* animal = new Animal();
-    const Animal* dog = new Dog();
-    const Animal* cat = new Cat();
-    const WrongAnimal* wrongcat = new WrongCat();
+    {
+        const Animal *array[4];
 
-    std::cout << animal->getType() << " " << std::endl;
-    std::cout << dog->getType() << " " << std::endl;
-    std::cout << cat->getType() << " " << std::endl;
-    std::cout << wrongcat->getType() << " " << std::endl;
+        for (int i = 0; i < 4; i++) {
+            std::cout << i << std::endl;
+            if (i < 2)
+                array[i] = new Cat();
+            else
+                array[i] = new Dog();
+        }
 
-    animal->makesound();
-    dog->makesound();
-    cat->makesound();
-    wrongcat->makesound();
+        std::cout << std::endl;
+        std::cout << "Constructed 2 Cats and 2 Dogs" << std::endl;
+        std::cout << std::endl;
 
-    delete animal;
-    delete dog;
-    delete cat;
-    delete wrongcat;
+        for (int i = 0; i < 4; i++) {
+            std::cout << i << std::endl;
+            delete array[i];
+        }
+
+        std::cout << std::endl;
+        std::cout << "Deleted the Cats and Dogs" << std::endl;
+        std::cout << std::endl;
+    }
+    {
+        const Cat *cat = new Cat();
+        std::cout << std::endl;
+
+        cat->setIdea("Real g's move in silent like lasagna");
+        cat->printThreeIdeas();
+        std::cout << std::endl;
+
+        const Cat *cat2 = new Cat(*cat);
+        std::cout << std::endl;
+
+        cat->printThreeIdeas();
+    }    
 }

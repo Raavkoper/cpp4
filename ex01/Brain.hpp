@@ -1,5 +1,6 @@
 #ifndef BRAIN_H
 #define BRAIN_H
+
 #include <iostream>
  
 class Brain {
@@ -8,9 +9,12 @@ private:
  
 public: 
 	Brain(); 
-	Brain( const Brain &rhs); 
+	Brain( const Brain &other); 
 	~Brain(); 
-	Brain& operator=( const Brain &rhs); 
+	Brain& operator=( const Brain &other); 
+
+	void setIdea(std::string idea);
+	void printThreeIdeas(void);
 }; 
  
 #endif

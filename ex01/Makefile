@@ -3,7 +3,7 @@ NAME = Animals
 COMP = c++
 C_FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp Cat.cpp WrongCat.cpp Dog.cpp Animal.cpp WrongAnimal.cpp
+SRC = main.cpp Cat.cpp Dog.cpp Animal.cpp Brain.cpp
 OBJS = $(SRC:%.cpp=%.o)
 
 all: $(NAME)

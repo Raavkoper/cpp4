@@ -12,8 +12,6 @@ Brain::Brain( const Brain& other) {
 	for (int i = 0; i < 100; i++) {
 		ideas[i] = other.ideas[i];
 	}
-
-	*this = other;
 }
 
 Brain::~Brain() {

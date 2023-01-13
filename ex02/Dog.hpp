@@ -10,10 +10,10 @@ private:
 	Brain *brain;
 
 public: 
-	Dog(); 
-	Dog( const Dog &rhs); 
+	Dog();
+	Dog( const Dog &other); 
 	~Dog(); 
-	Dog& operator=( const Dog &rhs);
+	Dog& operator=( const Dog &other);
 
 	void makesound() const;
 	void setIdea(std::string idea) const;

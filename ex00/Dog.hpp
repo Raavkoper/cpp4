@@ -7,9 +7,9 @@
 class Dog : public Animal {
 public: 
 	Dog(); 
-	Dog( const Dog &rhs); 
+	Dog( const Dog &other); 
 	~Dog(); 
-	Dog& operator=( const Dog &rhs);
+	Dog& operator=( const Dog &other);
 
 	void makesound() const;
 }; 
